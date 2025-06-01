@@ -10,11 +10,11 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: "http://localhost:5173", 
+  origin: "http://localhost:5173", // frontend origin
   credentials: true,
 }));
 app.use(express.json());
-app.use(cookieParser()); 
+app.use(cookieParser()); // required for reading cookies
 
 // MongoDB
 const uri = process.env.MONGODB_URI;

@@ -14,7 +14,7 @@ app.use(cors({
   credentials: true,
 }));
 app.use(express.json());
-app.use(cookieParser()); 
+app.use(cookieParser()); // required for reading cookies
 
 // MongoDB
 const uri = process.env.MONGODB_URI;
